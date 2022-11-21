@@ -1,0 +1,9 @@
+/*html{
+    background-color: rgb(173, 189, 227);
+   }*/
+head,header, body{
+    font-size:20px;color:#212529;font-family:Lora,'Times New Roman',serif
+}
+h2,h3,h6{
+    font-weight:800;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
