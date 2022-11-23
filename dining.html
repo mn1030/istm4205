@@ -9,20 +9,18 @@
 
     <header>
         <nav>
-            <div>
-                <ul>
-        
-                  <li class="up"><a  href="GWU Student Life.html">Home</a></li>
-                  <li class="up"><a  href="attraction.html">Attraction</a></li>
-                  <li class="up"><a  href="shopping.html">Shopping</a></li>
-                  </ul>
-              
+            <div class="topnav">
+              <a href="GWU Student Life.html">Home</a>
+              <a class="active" href="dining.html">Dining</a>
+              <a href="attraction.html">Attractions</a>
+              <a href="shopping.html">Shopping</a>
             </div>
           </nav>
         <h2>Dining</h2>
     </header>
 
 <body>
+    <!--
     <nav>
         <div>
             <ul>
@@ -119,7 +117,167 @@
               </ul>
           
         </div>
-      </nav>
+      </nav> -->
+    
+      <script>
+        //HERE WE DYNAMINCALLY ADD OUR RESTAURANTS
+          function Restaurant(id,name, address, phone, hrs, site){
+            this.id = id;
+            this.name = name;
+            this.address = address;
+            this.phone = phone;
+            this.hrs = hrs;
+            this.site = site;
+          }
+
+            //Bandoola Bowl
+          const bandoola = new Restaurant("bandoola","Bandoola Bowl", 
+          "2000 Pennsylvania Avenue NW, Washington, DC 20038",
+          "+1 2027583184",
+          "11 am - 8 pm (Mon - Thur), 11 am - 9 pm (Fri - Sat), 11 am - 7 pm (Sun)",
+          "https://bandoolabowl.com");
+
+            //Froggy Bottom
+          const froggy = new Restaurant("froggy","Froggy Bottom", 
+          "2021 K St NW, Washington, DC 20006",
+          "+1 2023383000",
+          "11 am - 1 am (Mon - Thur), 11 am - 2 am (Fri - Sat)",
+          "https://www.froggybottompub.com");
+
+            //&pizza
+          const pizza = new Restaurant("pizza","&pizza", 
+          "2224 F St NW, Washington, DC 20037",
+          "+1 2023355991",
+          "11 am - 10 pm (Mon - Sun)",
+          "https://andpizza.com");
+
+            //Tatte Bakery & Cafe
+          const tatte = new Restaurant("tatte","Tatte Bakery & Cafe", 
+          "1200 New Hampshire Ave NW, Washington, DC 20036",
+          "+1 2029198300",
+          "7 am - 8 pm (Mon - Sun)",
+          "https://tattebakery.com");
+
+            //Ground Magic Restaurant
+          const gourd = new Restaurant("gourd","Magic Gourd Restaraunt", 
+          "528 23rd St NW, Washington, DC 20037",
+          "+1 2024663995",
+          "11 am - 9 pm (Mon - Sat),Closed (Sun)",
+          "https://www.magicgourd528.com");
+
+            //Capo Deli
+          const capo = new Restaurant("capo","Capo Deli", 
+          "2000 Pennsylvania Avenue NW, Washington, DC 20006",
+          "+1 2028278012",
+          "11 am - 8 pm (Mon - Sun)",
+          "https://capodeli.com");
+
+            //GW Deli
+          const deli = new Restaurant("deli","GW Deli", 
+          "2133 G St NW, Washington, DC 20037",
+          "+1 2023319391",
+          "6:30 am - 5 pm (Mon - Fri), 8 am - 4 pm (Sat), Closed (Sun)",
+          "https://www.allmenus.com/dc/washington/643367-gw-delicatessen/menu");
+
+            //Founding Farmers
+          const farmers = new Restaurant("farmers","Founding Farmers", 
+          "2133 G St NW, Washington, DC 20037",
+          "+1 2023319391",
+          "6:30 am - 5 pm (Mon - Fri), 8 am - 4 pm (Sat), Closed (Sun)",
+          "https://www.allmenus.com/dc/washington/643367-gw-delicatessen/menu");
+
+            //Ted's Bulletin
+          const ted = new Restaurant("ted","Ted's Bulletin", 
+          "4238 Wilson Blvd, Arlington, VA 22203",
+          "+1 7038487580",
+          "7 am - 10 pm (Mon - Sun)",
+          "https://www.tedsbulletin.com");
+
+            //Baked and Wired
+          const baked = new Restaurant("baked","Baked and Wired", 
+          "1052 Thomas Jefferson St NW, Washington, DC 20007",
+          "+1 7036638727",
+          "8 am - 4 pm (Mon - Sun), Closed (Thru)",
+          "https://bakedandwired.com");
+
+          //Georgetown Cupcake
+          const gtowncupcake = new Restaurant("gtowncupcake","Georgetown Cupcake", 
+          "3301 M St NW, Washington, DC 20007",
+          "+1 2023338448",
+          "10am - 9 pm (Mon - Sat), 10 am - 8 pm",
+          "https://www.georgetowncupcake.com");
+
+
+            //Soi 38
+          const soi38 = new Restaurant("soi38","Soi 38", 
+          "2101 L St NW, Washington, DC 20037",
+          "+1 2025589215",
+          "11 am - 10 pm (Mon - Fri), 12 pm - 10 pm (Sat - Sun)",
+          "https://www.soi38dc.com");
+
+            // Toryumon
+          const toryumon = new Restaurant("toryumon","Toryumon", 
+          "1901 Pennsylvania Avenue NW #0001, Washington, DC 20006",
+          "+1 2027854600",
+          "11am - 11:30 pm, 5pm - 10pm (Mon - Fri), 12pm - 10pm (Sat - Sun)",
+          "https://www.toryumonjapanese.com");
+
+            //Chipotle
+          const chipotle = new Restaurant("chipotle","Chipotle", 
+          "2000 Pennsylvania Ave NW Lbby 15, Washington, DC 20006",
+          "+1 2027066761",
+          "10:45 am - 10 pm (Mon - Sun)",
+          "https://www.chipotle.com");
+
+            //Tonic
+          const tonic = new Restaurant("tonic","Tonic At Quigley's", 
+          "2036 G St NW, Washington, DC 20036",
+          "+1 2022960211",
+          "11:30 am - 10 pm (Mon - Fri), Closed (Sat), 11 am - 10 pm (Sun)",
+          "https://www.tonicrestaurantdc.com");
+
+
+          const restaurants = [bandoola,froggy,pizza,tatte,gourd,capo,deli,farmers,ted,baked,gtowncupcake,soi38,toryumon, chipotle, tonic];
+
+          for (i = 0; i< restaurants.length;i++){
+              // Create "div" node:
+            const ourDiv = document.createElement("div");
+            ourDiv.setAttribute("class","restaurantLi");
+
+            // Create a li for name
+            const li = document.createElement("button");
+            li.setAttribute("onclick", "window.location.href='"+restaurants[i].site+"';");
+            li.innerHTML=restaurants[i].name;
+            li.style.backgroundImage = "url(images/places/"+restaurants[i].id+".png)";
+
+            // Append name
+            ourDiv.appendChild(li);
+
+            // Append address
+            const address = document.createElement("p");
+            address.innerHTML = "<img src="+"images/location.png height=20"+" alt='location' />"+restaurants[i].address;
+            ourDiv.appendChild(address);
+
+            // Append phone number
+            const phoneNum = document.createElement("p");
+            phoneNum.innerHTML = "<img src="+"images/phone.png height=20"+" alt='phone' />"+restaurants[i].phone;
+            ourDiv.appendChild(phoneNum);
+
+            // Append hours
+            const hours = document.createElement("p");
+
+            hours.innerHTML = restaurants[i].hrs;
+            ourDiv.appendChild(hours);
+
+
+            // Append the div node to the list:
+            document.getElementById("restaurantList").appendChild(ourDiv);
+
+          }
+          
+
+
+      </script>
 </body>
 <footer>
 
