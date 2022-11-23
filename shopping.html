@@ -21,64 +21,147 @@
 
     <body>
         <nav>
-            <div>
-                <ul>
-                    <div>
-                  <li class="shop"><a  href=https://easternmarket-dc.org>Eastern Market</a></li>
-                  <h6>Address: 225 7th St SE, Washington, DC 20003</h6>
-              <h6>Phone: +1 2026985253</h6>
-              <h6>Hours: 8 am - 6 pm (Tue - Sun), Closed (Mon)</h6>
-                 
-                </div>
-                <div>
-                  <li class="shop"><a  href=https://www.georgetowndc.com>Georgetown</a></li>
-                  <h6>Address: Washington, DC 20007</h6>
-              <h6>Phone: </h6>
-              <h6>Hours: </h6>
-                </div>
-            <div>
-                  <li class="shop"><a  href=https://www.tysonscornercenter.com>Tysons Corner</a></li>
-                  <h6>Address: 1961 Chain Bridge Rd, Tysons, VA 22102</h6>
-              <h6>Phone: +1 7038939400</h6>
-              <h6>Hours: 10 am - 9 pm (Mon - Fri), 9 am - 9 pm (Sat), 11 am - 7 pm (Sun)</h6>
-                </div>
-            <div>
-                  <li class="shop"><a  href=https://www.citycenterdc.com>CityCenter DC</a></li>
-                  <h6>Address: 825 10th St NW, Washington, DC 20268</h6>
-              <h6>Phone:  +1 2022899000</h6>
-              <h6>Hours: 10 am - 7 pm (Mon - Sun)</h6>
-                </div>
-            <div>
-                  <li class="shop"><a  href=https://www.simon.com/mall/fashion-centre-at-pentagon-city>Pentagon City</a></li>
-                  <h6>Address: 1100 S Hayes St, Arlington, VA 22202</h6>
-              <h6>Phone: +1 7034152400</h6>
-              <h6>Hours: 10am - 9 pm (Mon - Sat), 11am - 6 pm (Sun)</h6>
-                </div>
-            <div>
-                  <li class="shop"><a  href=http://www.georgetownfleamarket.com>Georgetown Flea Market</a></li>
-                  <h6>Address: 1819 35th St NW, Washington, DC 20007</h6>
-              <h6>Phone: +1 2027753532</h6>
-              <h6>Hours: 8 am - 4 pm (Sun)</h6>
-                </div>
-            <div>
-                  <li class="shop"><a  href=https://www.dupontlittleflea.com>Dupont Little Flea Market</a></li>
-                  <h6>Address: Corner of 19th and Q Streets, 1909 Q St NW, Washington, DC 20009</h6>
-              <h6>Phone: +1 2027013197</h6>
-              <h6>Hours: 10 am - 3 pm (Sun)</h6>
-                </div>
-            <div>
-                  <li class="shop"><a  href= >Columbia</a></li>
-                  <h6>Address: </h6>
-              <h6>Phone: </h6>
-              <h6>Hours: </h6>
-                </div>
-                </ul>
-                </div>
+            <div class="ourShopping">
+                <ul id="shoppingList"></ul>
+              </div>
         </nav>
     
     
-    </body>
+        <script>
+          //HERE WE DYNAMINCALLY ADD OUR SHOPPING DESTINATIONS
+          function Shop(id,name, address, phone, hrs, site){
+            this.id = id;
+            this.name = name;
+            this.address = address;
+            this.phone = phone;
+            this.hrs = hrs;
+            this.site = site;
+          }
 
+          //Eastern Market
+          const eastern = new Shop(
+            "eastern",
+            "Eastern Market",
+            "225 7th St SE, Washington, DC 20003",
+            "(202) 698-5253",
+            "8 am - 6 pm (Tue - Sun), Closed (Mon)",
+            "https://easternmarket-dc.org"
+          );
+
+          //Gerogetown
+          const gtown = new Shop(
+            "gtown",
+            "Georgetown",
+            "3001-3049 M St NW, Washington, DC 20007",
+            "(202) 298-9222",
+            " ",
+            "https://www.georgetowndc.com"
+          );
+
+          //Georgetown Flea
+          const gtownFlea = new Shop(
+            "gtownFlea",
+            "Georgetown Flea Market",
+            "1819 35th St NW, Washington, DC 20007",
+            "(202) 775-3532",
+            "8 am - 4 pm (Sun)",
+            "http://www.georgetownfleamarket.com"
+          );
+
+          //Tysons Center
+          const tysons = new Shop(
+            "tysons",
+            "Tysons Corner Center",
+            "1961 Chain Bridge Rd, Tysons, VA 22102",
+            "(703) 893-9400",
+            "10 am - 9 pm (Mon - Fri), 9 am - 9 pm (Sat), 11 am - 7 pm (Sun)",
+            "https://www.tysonscornercenter.com"
+          );
+
+          //CityCenter
+          const citycenter = new Shop(
+            "citycenter",
+            "CityCenterDC",
+            "825 10th St NW, Washington, DC 20268",
+            "(202) 289-9000",
+            "10 am - 7 pm (Mon - Sun)",
+            "https://www.citycenterdc.co"
+          );
+
+          //Pentagon City
+          const pentagon = new Shop(
+            "pentagon",
+            "Pentagon City",
+            "1100 S Hayes St, Arlington, VA 22202",
+            "(703) 415-2400",
+            "10am - 9 pm (Mon - Sat), 11am - 6 pm (Sun)",
+            "https://www.simon.com/mall/fashion-centre-at-pentagon-city"
+          );
+
+          //Dupont Flea
+          const dupont = new Shop(
+            "dupont",
+            "Dupont Little Flea Market",
+            "Corner of 19th and Q Streets, 1909 Q St NW, Washington, DC 20009",
+            "(202) 7013197",
+            "10 am - 3 pm (Sun)",
+            "https://www.dupontlittleflea.com"
+          );
+
+          //14th Street
+          const fourtheenth = new Shop(
+            "fourteenth",
+            "14th Street",
+            "14th St NW, Washington, DC 20004",
+            " ",
+            " ",
+            "https://washington.org/visit-dc/never-ending-excitement-14th-street"
+          );
+
+          const shopping = [eastern, gtown, gtownFlea,tysons,citycenter,pentagon,dupont, fourtheenth];
+
+          for (i = 0; i< shopping.length;i++){
+              // Create "div" node:
+            const ourDiv = document.createElement("div");
+            ourDiv.setAttribute("class","shoppingLi");
+
+            // Create a li for name
+            const li = document.createElement("button");
+            li.setAttribute("onclick", "window.location.href='"+shopping[i].site+"';");
+            li.innerHTML=shopping[i].name;
+            li.style.backgroundImage = "url(images/places/"+shopping[i].id+".png)";
+
+            // Append name
+            ourDiv.appendChild(li);
+
+            // Append address
+            const address = document.createElement("p");
+            address.innerHTML = "<img src="+"images/location.png height=20"+" alt='location' />"+"  "+shopping[i].address;
+            ourDiv.appendChild(address);
+
+            // Append phone number
+            if (shopping[i].phone != " "){
+              const phoneNum = document.createElement("p");
+              phoneNum.innerHTML = "<img src="+"images/phone.png height=20"+" alt='phone' />"+"  "+shopping[i].phone;
+              ourDiv.appendChild(phoneNum);
+            }
+            
+
+            // Append hours
+            const hours = document.createElement("p");
+
+            hours.innerHTML = shopping[i].hrs;
+            ourDiv.appendChild(hours);
+            
+
+
+            // Append the div node to the list:
+            document.getElementById("shoppingList").appendChild(ourDiv);
+
+          }
+
+        </script>
+    </body>
     <footer>
 
     </footer>
