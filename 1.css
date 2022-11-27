@@ -81,13 +81,17 @@ div{
 
  .restaurantLi, .shoppingLi {
     width: 405px;
-    background-color: cadetblue;
+    background-color: rgb(110, 192, 227);
     padding: 15px;
     border-radius: 10px;
  }
 
  .attractionLi {
     padding: 15px;
+    width: 805px;
+    background-color: rgb(110, 192, 227);
+    padding: 15px;
+    border-radius: 10px;
  }
 
 ul{
@@ -120,7 +124,7 @@ a{
     font-size: 30px;
     text-shadow: 4px 4px 8px #000000;
 
-	box-shadow: 0 6px 10px -5px #777;
+	box-shadow: 0 6px 10px -5px rgb(2, 34, 53);
     transition-duration: 0.5s;
     cursor: pointer;
     border-radius: 15px;
