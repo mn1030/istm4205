@@ -9,12 +9,12 @@
 
     <header>
         <nav>
-            <div class="topnav">
-            <a href="GWU Student Life.html">Home</a>
-            <a href="dining.html">Dining</a>
-            <a class="active" href="attraction.html">Attractions</a>
-            <a href="shopping.html">Shopping</a>
-          </div>
+          <ul class="topnav">
+            <li><a href="GWU Student Life.html">Home</a></li>
+            <li><a class="active" href="dining.html">Dining</a></li>
+            <li><a href="attraction.html">Attractions</a></li>
+            <li><a href="shopping.html">Shopping</a></li>
+          </ul>
           </nav>
         <div id="shopping">
         <h2>Shopping</h2>
@@ -131,7 +131,7 @@
             const li = document.createElement("button");
             li.setAttribute("onclick", "window.location.href='"+shopping[i].site+"';");
             li.innerHTML=shopping[i].name;
-            li.style.backgroundImage = "url(images/shopping/"+shopping[i].id+".png)";
+            li.style.backgroundImage = "url(images/places/"+shopping[i].id+".png)";
 
             // Append name
             ourDiv.appendChild(li);
