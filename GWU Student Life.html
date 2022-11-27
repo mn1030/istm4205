@@ -15,57 +15,77 @@ div.up {
 } 
 </style>
 
-    <body id="home">
-      <header>
-       
-        <nav>
-            <ul class="topnav">
-              <li><a href="GWU Student Life.html">Home</a></li>
-              <li><a class="active" href="dining.html">Dining</a></li>
-              <li><a href="attraction.html">Attractions</a></li>
-              <li><a href="shopping.html">Shopping</a></li>
-            </ul>
-          </nav>
-        </header>
-        <div>
-        <h1>Welcome to the GWU Student Life Guide</h1>
-        </div>
-        <div>
-        <a href="dining.html">
-        <h2>Dining</h2>
-        </a>
-          <img src="images/Home/home.dining.png" alt="Dining"
-          width="800" 
-     height="450">
-        <h3>🥡Trying to find a place to have a delicious meal?🥡</h3>
-        <h4>DC has dining options for all of you cravings, both on Foggy Bottom or a short distance from campus.</h4>
-        </div>
-            
-            
-        <div>
-        <a href="attraction.html">
-        <h2>Attraction</h2>
-        </a>
-          <img src="images/Home/home.attraction.png" alt="Attraction"
-          width="800" 
-     height="450">
-        <h3>🏞️Looking for a place to visit?🏞️</h3>
-        <h4>Explore some fun places in DC and have a good time.</h4>
-        </div>
-        
-        <div>
-        <a href="shopping.html">
-        <h2>Shopping</h2>
-        </a>
-        <img src="images/Home/home.shopping.png" alt="shopping"
-          width="800" 
-     height="450">    
-        <h3>💲💵Time to spend 💵💲</h3>
-        <h4>Shop for what you want.</h4>
-        </div>
-    </body>
+<body id="home">
+  <header>
+    <nav>
+      <div class="topnav">
+      <a href="GWU Student Life.html">Home</a>
+      <a class="active" href="dining.html">Dining</a>
+      <a href="attraction.html">Attractions</a>
+      <a href="shopping.html">Shopping</a>
+    </div>
+    </nav>
+    </header>
 
-    <footer>
+    <h1>Welcome to the GWU Student Life Guide</h1>
+
+    <nav>
+      <div class="ourPages">
+          <ul id="pageList">
+          </ul>
+        
+      </div>
+    </nav> 
+
+    <script>
+      function Page(id,h2,h3){
+        this.id = id;
+        this.h2 = h2;
+        this.h3 = h3;
+      }
+
+      const dining = new Page("dining", 
+      "Dining",
+      "Grab a bite to eat");
+
+      const attraction = new Page("attraction", 
+      "Attractions",
+      "Explore DC's famous attractions");
+
+      const shopping = new Page("shopping", 
+      "Shopping",
+      "Shop at DMV malls or local markets");
+
+      const pages = [dining, attraction, shopping];
+
+      for (i = 0; i < pages.length;i++){
+         // Create "div" node:
+         const ourDiv = document.createElement("div");
+        ourDiv.setAttribute("class","pageLi");
+
+        // Create a li for name
+        const li = document.createElement("button");
+        li.setAttribute("onclick", "window.location.href='"+pages[i].id+".html");
+        li.innerHTML=pages[i].h2;
+        li.style.backgroundImage = "url(images/home/"+pages[i].id+".png)";
+
+        // Append name
+        ourDiv.appendChild(li);
+        
+
+        // Append the div node to the list:
+        document.getElementById("pageList").appendChild(ourDiv);
+      }
+    </script>
+</body>
+
+<footer>
+  <br>
+  <hr>
+  <br>
+</footer>
+</html>
+
       
     </footer>
 </html>
