@@ -34,6 +34,17 @@ body > div{
 h2,h3,h6{
     font-weight:800;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
 }
+.headerImage{
+    padding: 40px;
+    margin: 0px;
+    background-size: cover;
+    background-image: url(images/header\ image.jpeg);
+}
+.homeLink{
+    color: white;
+    text-shadow: 4px 4px 8px #000000;
+    font-size: 1.5em;
+}
 
 .topnav{
     list-style-type: none;
