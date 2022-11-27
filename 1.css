@@ -2,7 +2,7 @@
     background-color: rgb(173, 189, 227);
    }*/
 head,body{
-    font-size:20px;color:#212529;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:20px;color:#212529;font-family:'Trebuchet MS', sans-serif;
     
 }
 
@@ -34,11 +34,10 @@ body > div{
     background-color: beige;
 }
 h2,h3,h6{
-    font-weight:800;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+    font-weight:800;font-family:'Trebuchet MS', sans-serif;
 }
-
 .topnav{
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Trebuchet MS', sans-serif;
     color: blue;
     font-size: 1.5em;
     text-shadow: 2px 2px 2px #fff;
