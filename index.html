@@ -17,10 +17,13 @@ div.up {
 
 <body id="home">
   <header>
+
+    
     <nav>
       <h1 class="headerImage"><a class="homeLink" href="GWU Student Life.html">GWU Student Life</a></h1>
+
       <div class="topnav">
-      <a href="GWU Student Life.html">Home</a>
+      <a href="index.html">Home</a>
       <a class="active" href="dining.html">Dining</a>
       <a href="attraction.html">Attractions</a>
       <a href="shopping.html">Shopping</a>
@@ -66,7 +69,7 @@ div.up {
 
         // Create a li for name
         const li = document.createElement("button");
-        li.setAttribute("onclick", "window.location.href='"+pages[i].id+".html");
+        li.setAttribute("onclick", "window.location.href='"+pages[i].id+".html';");
         li.innerHTML=pages[i].h2;
         li.style.backgroundImage = "url(images/home/"+pages[i].id+".png)";
 
