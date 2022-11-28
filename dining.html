@@ -36,120 +36,136 @@
     
       <script>
         //HERE WE DYNAMINCALLY ADD OUR RESTAURANTS
-          function Restaurant(id,name, address, phone, hrs, site){
+          function Restaurant(id,name, address, phone, hrs, site, discount){
             this.id = id;
             this.name = name;
             this.address = address;
             this.phone = phone;
             this.hrs = hrs;
             this.site = site;
+            this.discount = discount;
           }
 
             //Bandoola Bowl
           const bandoola = new Restaurant("bandoola","Bandoola Bowl", 
           "2000 Pennsylvania Avenue NW, Washington, DC 20038",
-          "+1 2027583184",
+          "(202) 758-3184",
           "11 am - 8 pm (Mon - Thur), 11 am - 9 pm (Fri - Sat), 11 am - 7 pm (Sun)",
-          "https://bandoolabowl.com");
+          "https://bandoolabowl.com",
+          "10% Student Discount!");
 
             //Froggy Bottom
           const froggy = new Restaurant("froggy","Froggy Bottom", 
           "2021 K St NW, Washington, DC 20006",
-          "+1 2023383000",
+          "(202) 338-3000",
           "11 am - 1 am (Mon - Thur), 11 am - 2 am (Fri - Sat)",
-          "https://www.froggybottompub.com");
+          "https://www.froggybottompub.com",
+          "");
 
             //&pizza
           const pizza = new Restaurant("pizza","&pizza", 
           "2224 F St NW, Washington, DC 20037",
-          "+1 2023355991",
+          "(202) 335-5991",
           "11 am - 10 pm (Mon - Sun)",
-          "https://andpizza.com");
+          "https://andpizza.com",
+          "On GWorld!");
 
             //Tatte Bakery & Cafe
           const tatte = new Restaurant("tatte","Tatte Bakery & Cafe", 
           "1200 New Hampshire Ave NW, Washington, DC 20036",
-          "+1 2029198300",
+          "(202) 919-8300",
           "7 am - 8 pm (Mon - Sun)",
-          "https://tattebakery.com");
+          "https://tattebakery.com",
+          "");
 
             //Ground Magic Restaurant
           const gourd = new Restaurant("gourd","Magic Gourd Restaraunt", 
           "528 23rd St NW, Washington, DC 20037",
-          "+1 2024663995",
+          "(202) 466-3995",
           "11 am - 9 pm (Mon - Sat),Closed (Sun)",
-          "https://www.magicgourd528.com");
+          "https://www.magicgourd528.com",
+          "");
 
             //Capo Deli
           const capo = new Restaurant("capo","Capo Deli", 
           "2000 Pennsylvania Avenue NW, Washington, DC 20006",
-          "+1 2028278012",
+          "(202) 827-8012",
           "11 am - 8 pm (Mon - Sun)",
-          "https://capodeli.com");
+          "https://capodeli.com",
+          "");
 
             //GW Deli
           const deli = new Restaurant("deli","GW Deli", 
           "2133 G St NW, Washington, DC 20037",
-          "+1 2023319391",
+          "(202) 331-9391",
           "6:30 am - 5 pm (Mon - Fri), 8 am - 4 pm (Sat), Closed (Sun)",
-          "https://www.allmenus.com/dc/washington/643367-gw-delicatessen/menu");
+          "https://www.allmenus.com/dc/washington/643367-gw-delicatessen/menu",
+          "On GWorld!");
 
             //Founding Farmers
           const farmers = new Restaurant("farmers","Founding Farmers", 
           "2133 G St NW, Washington, DC 20037",
-          "+1 2023319391",
+          "(202) 822-8783",
           "6:30 am - 5 pm (Mon - Fri), 8 am - 4 pm (Sat), Closed (Sun)",
-          "https://www.allmenus.com/dc/washington/643367-gw-delicatessen/menu");
+          "https://www.allmenus.com/dc/washington/643367-gw-delicatessen/menu",
+          "");
 
             //Ted's Bulletin
           const ted = new Restaurant("ted","Ted's Bulletin", 
           "4238 Wilson Blvd, Arlington, VA 22203",
-          "+1 7038487580",
+          "(703) 848-7580",
           "7 am - 10 pm (Mon - Sun)",
-          "https://www.tedsbulletin.com");
+          "https://www.tedsbulletin.com",
+          "");
 
             //Baked and Wired
           const baked = new Restaurant("baked","Baked and Wired", 
           "1052 Thomas Jefferson St NW, Washington, DC 20007",
-          "+1 7036638727",
+          "(703) 663-8727",
           "8 am - 4 pm (Mon - Sun), Closed (Thru)",
-          "https://bakedandwired.com");
+          "https://bakedandwired.com",
+          "");
 
           //Georgetown Cupcake
           const gtowncupcake = new Restaurant("gtowncupcake","Georgetown Cupcake", 
           "3301 M St NW, Washington, DC 20007",
-          "+1 2023338448",
+          "(202) 333-8448",
           "10am - 9 pm (Mon - Sat), 10 am - 8 pm",
-          "https://www.georgetowncupcake.com");
+          "https://www.georgetowncupcake.com",
+          "");
 
 
             //Soi 38
           const soi38 = new Restaurant("soi38","Soi 38", 
           "2101 L St NW, Washington, DC 20037",
-          "+1 2025589215",
+          "(202) 558-9215",
           "11 am - 10 pm (Mon - Fri), 12 pm - 10 pm (Sat - Sun)",
-          "https://www.soi38dc.com");
+          "https://www.soi38dc.com",
+          "");
 
             // Toryumon
           const toryumon = new Restaurant("toryumon","Toryumon", 
           "1901 Pennsylvania Avenue NW #0001, Washington, DC 20006",
-          "+1 2027854600",
+          "(202) 785-4600",
           "11am - 11:30 pm, 5pm - 10pm (Mon - Fri), 12pm - 10pm (Sat - Sun)",
-          "https://www.toryumonjapanese.com");
+          "https://www.toryumonjapanese.com",
+          "On GWorld!");
 
             //Chipotle
           const chipotle = new Restaurant("chipotle","Chipotle", 
           "2000 Pennsylvania Ave NW Lbby 15, Washington, DC 20006",
-          "+1 2027066761",
+          "(202) 706-6761",
           "10:45 am - 10 pm (Mon - Sun)",
-          "https://www.chipotle.com");
+          "https://www.chipotle.com",
+          "On GWorld!");
 
             //Tonic
           const tonic = new Restaurant("tonic","Tonic At Quigley's", 
           "2036 G St NW, Washington, DC 20036",
-          "+1 2022960211",
+          "(202) 296-0211",
           "11:30 am - 10 pm (Mon - Fri), Closed (Sat), 11 am - 10 pm (Sun)",
-          "https://www.tonicrestaurantdc.com");
+          "https://www.tonicrestaurantdc.com",
+          "On GWorld!");
 
 
           const restaurants = [bandoola,froggy,pizza,tatte,gourd,capo,deli,farmers,ted,baked,gtowncupcake,soi38,toryumon, chipotle, tonic];
@@ -183,6 +199,14 @@
 
             hours.innerHTML = restaurants[i].hrs;
             ourDiv.appendChild(hours);
+
+            // Append discount status
+            if (restaurants[i].discount != ""){
+              const hasDiscount = document.createElement("p");
+              hasDiscount.setAttribute("class","discount")
+              hasDiscount.innerHTML = restaurants[i].discount;
+              ourDiv.appendChild(hasDiscount);
+            }
 
 
             // Append the div node to the list:
