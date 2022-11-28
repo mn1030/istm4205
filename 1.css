@@ -173,6 +173,11 @@ h4{
     font-size: 18px;
 }
 
-.fa.fa-github{
+.fa.fa-github, .footer {
     color:gray;
+}
+
+.discount{
+    font-weight: bold;
+    color:maroon;
 }
