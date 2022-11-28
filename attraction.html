@@ -34,7 +34,7 @@
 
         <script>
           //HERE WE DYNAMINCALLY ADD OUR ATTRACTIONS
-          function Attraction(id,name, blurb, address, phone, hrs, site){
+          function Attraction(id,name, blurb, address, phone, hrs, site, discount){
             this.id = id;
             this.name = name;
             this.blurb = blurb;
@@ -42,6 +42,7 @@
             this.phone = phone;
             this.hrs = hrs;
             this.site = site;
+            this.discount = discount;
           }
 
           //Phillips Collection
@@ -52,18 +53,20 @@
             "1600 21st St NW, Washington, DC 20009",
             "(202) 387-2151",
             "11 AM-6 PM (Tues-Sun)",
-            "https://www.phillipscollection.org"
+            "https://www.phillipscollection.org",
+            ""
           );
 
           //Kennedy Center
           const kennedy = new Attraction(
             "kennedy",
             "The Kennedy Center",
-            "The John F. Kennedy Center for the Performing Arts is the cultural center of the United States and is home to the National Symphony Orchestra and the Washington National Opera. Visit this national cultural center to enjoy countless genres of performance art including theater, pop, jazz, and more. Undergraduate students can take advantage of discounted admission when purchasing tickets through MyTix",
+            "The John F. Kennedy Center for the Performing Arts is the cultural center of the United States and is home to the National Symphony Orchestra and the Washington National Opera. Visit this national cultural center to enjoy countless genres of performance art including theater, pop, jazz, and more.",
             "2700 F St NW, Washington, DC 20566",
             "(202) 467-4600",
             "10 AM - 12 AM",
-            "https://www.kennedy-center.org/mytix/"
+            "https://www.kennedy-center.org/mytix/",
+            "Undergrad students get discounted admission when purchasing tickets through MyTix!"
           );
 
           //Smithsonian Institution
@@ -74,7 +77,8 @@
             "600 Maryland Ave SW, Washington, DC",
             "(202) 633-1000",
             "8:30 AM - 5:30 PM",
-            "https://washington.org/smithsonian-institution-museums"
+            "https://washington.org/smithsonian-institution-museums",
+            ""
           );
 
           //Capitol Hill
@@ -85,7 +89,8 @@
             "First St and East Capitol NE, Washington, DC 20004",
             "(202) 789-7000",
             "8:30 am - 4:30 pm (Mon - Sat)",
-            "https://washington.org/dc-neighborhoods/capitol-hill"
+            "https://washington.org/dc-neighborhoods/capitol-hill",
+            ""
           );
 
           //Capital One Arena
@@ -96,7 +101,8 @@
             "601 F St NW, Washington, DC 20004",
             "(202) 628-3200",
             "12 PM - 4 PM (Mon - Fri)",
-            "https://www.capitalonearena.com"
+            "https://www.capitalonearena.com",
+            ""
           );
 
           //National Zoo
@@ -107,7 +113,8 @@
             "3001 Connecticut Ave NW, Washington, DC 2000",
             "(202) 633-4888",
             "8 AM - 4 PM",
-            "https://nationalzoo.si.edu"
+            "https://nationalzoo.si.edu",
+            ""
           );
 
           //Ford's Theater
@@ -118,7 +125,8 @@
             "511 10th St NW, Washington, DC 20004",
             "(202) 347-4833",
             "8:40 AM-4 PM",
-            "https://www.fords.org"
+            "https://www.fords.org",
+            ""
           );
           
           //Rock Creek Park
@@ -129,7 +137,8 @@
             "5200 Glover Rd NW, Washington, DC 20008",
             "(202) 895-6000",
             "Daylight Hours",
-            "https://www.nps.gov/rocr/index.htm"
+            "https://www.nps.gov/rocr/index.htm",
+            ""
           );
 
           //Washington National Cathedreal
@@ -140,7 +149,8 @@
             "3101 Wisconsin Ave NW, Washington, DC 20016",
             "(202) 537-6200",
             "10 AM - 5 PM",
-            "https://cathedral.org"
+            "https://cathedral.org",
+            ""
           );
 
           //Mount Vernon
@@ -151,7 +161,8 @@
             "3200 Mount Vernon Memorial Hwy, Mt Vernon, VA 22121",
             "(703) 780-2000",
             "9 AM - 4 PM",
-            "https://www.mountvernon.org"
+            "https://www.mountvernon.org",
+            ""
           );
 
           const attractions = [phillips,kennedy,smithsonian,capHill,capArena,zoo,ford,rockCreek,cathedral, vernon];
@@ -191,6 +202,14 @@
             blurb.innerHTML = attractions[i].blurb;
             blurb.setAttribute("class","blurb");
             ourDiv.appendChild(blurb);
+
+            // Append discount status
+            if (attractions[i].discount != ""){
+              const hasDiscount = document.createElement("p");
+              hasDiscount.setAttribute("class","discount")
+              hasDiscount.innerHTML = attractions[i].discount;
+              ourDiv.appendChild(hasDiscount);
+            }
             
 
 
@@ -204,6 +223,7 @@
     
     
     </body>
+
     <footer style="text-align: center;">
       <br>
       <hr>
