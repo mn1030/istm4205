@@ -1,150 +1,201 @@
-/*HEADER*/
-#header{
-  position:relative;
-  overflow: hidden;
-}
-
-#nameMain{
-  font-size: 50px;
-  color:#3b3129;
-}
-
-#nameShadow{
-  color: rgb(250, 198, 157);
+head,body{
+    font-size:20px;color:#212529;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    
 }
 
 
-/*PROJECT GALLERY*/
-.gallery-item {
-  position: relative;
-  width: 450px;
-  height: 300px;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.hide-parent {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 254, 252, 0.868);
-  visibility: hidden;
-  opacity: 0;
-  transition: all ease-in-out 250ms;
-}
-
-/*Set the text position and color*/
-.hide{
-  color:#3b3129;
-  z-index: 1;
-  font-weight:500;
-  text-shadow: 2px 2px 5px rgb(189, 189, 189);
-}
-
-.gallery-text{
-  padding-top: 5%;
-}
-
-.gallery-item:hover .hide-parent {
-  visibility: visible;
-  opacity: 1;
+body {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1020px;
+	min-width: 640px;
+    background-color: white;
 }
 
 
-.gallery-text{
-  margin-top: 1px;
+body > div{
+	width: 100%;
+	margin-left: 2%;
+	margin-right: 2%;
+    background-color: rgb(248,224,142);
+}
+h2,h3,h6{
+    font-weight:800;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif
+}
+.headerImage{
+    padding: 40px;
+    margin: 0px;
+    background-size: cover;
+    background-image: url(images/header\ image.jpeg);
+}
+.homeLink{
+    color: white;
+    text-shadow: 4px 4px 8px #000000;
+    font-size: 1.5em;
 }
 
-.gallery-text, .gallery-subtitle, .gallery-button{
-  text-align: center;
+.topnav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #003b5c;
 }
 
-.gallery-subtitle{
-  margin-top: 1%;
-  padding-left: 5%;
-  padding-right: 5%;
+
+div.topnav > a{
+    float:left;
+    display: block;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div.topnav > a:hover{
+    background-color: #0f74a0;
+    transition: all ease-in-out 250ms;
+}
+
+p{
+    font-size: 0.85em;
+    color: rgb(0, 59,92);
+}
+
+aside{
+    text-align: center;
+}
+
+div{
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    box-shadow: 0 6px 10px -5px #777;
+    
+    
+ }
+
+ .restaurantLi, .shoppingLi {
+    width: 405px;
+ }
+
+ .attractionLi {
+    padding: 15px;
+    width: 805px;  
+ }
+
+ .attractionLi, .restaurantLi, .shoppingLi{
+    padding: 15px;
+    border: #2b80a4 solid 2.5px;
+    border-radius: 10px;
+    background-color: rgb(110, 192, 227);
+ }
+
+ .restaurantLi, .shoppingLi{
+    height: 350px;
+    margin-bottom: 10px;
+ }
+
+ .attractionLi{
+    margin-bottom: 10px;
+    height: 450px;
+ }
+
+ .ourRestaurants {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Optional: ensures the content takes at least the full viewport height */
+}
+
+ul{
+    list-style-type: none;
+    padding: 0; /* Remove default padding for ul */
+}
+
+a{
+    text-decoration: none;
+}
+
+.ourRestaurants ul, .ourAttractions ul, .ourShopping ul{
+	list-style: none;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+    background-color: white;
+    box-shadow: none;
+}
+
+.ourRestaurants ul button, .ourShopping ul button, .ourPages button{
+
+    display: block; margin: auto;
+	width: 400px;
+	height: 150px;
+    margin-top: 15px;
+
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 4px 4px 8px #000000;
+
+	box-shadow: 0 6px 10px -5px rgb(2, 34, 53);
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 0cm;
+}
+
+.ourAttractions ul button{
+    display: block; margin: auto;
+	width: 800px;
+	height: 200px;
+
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 4px 4px 8px #000000;
+
+	box-shadow: 0 6px 10px -5px #777;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 0cm;
+}
+
+button.btn:hover {
+    
+    transition: all ease-in-out 250ms;
+    border: #003b5c solid 3px;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.534);
 }
 
 
-.gallery-button > a, .gallery-button > a:hover{
-  border: 1px solid #3b3129;
-  margin-top: 5%;
-  color:#3b3129;
 
-}
-/*MAIN PAGE*/
-html{
-  scroll-behavior: smooth;
+#dining, #shopping, #attraction{
+    background-color: rgb(248,224,142);
 }
 
-body{
-  overflow-x: hidden;
+h4{
+    font-size: 18px;
 }
 
-h2{
-  text-align: center;
-  margin-top: 2%;
-  margin-bottom: 2%;
+.fa.fa-github, .footer {
+    color:gray;
 }
 
-#content{
-  margin-left: 5%;
-  padding-top: 5%;
+.discount{
+    font-weight: bold;
+    color:maroon;
 }
 
-.text, .gallery-text{
-  color: #3b3129;
-  font-size:larger;
-}
-
-.bi{
-  margin: 5px;
-}
-
-.grad{
-  background-image: linear-gradient(#FFF0DF,#c8efff, #FFF0DF);
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 100%;
-}
-
-#navbar {
-  overflow: hidden;
-  background-color: rgb(200, 240, 255);
-  border-bottom: solid 2px rgb(142, 198, 220);
-}
-
-/* Navbar links */
-#navbar a {
-  float: left;
-  display: block;
-  color: #3b3129;
-  font-weight: 450;
-  text-align: center;
-  padding: 20px;
-  text-decoration: none;
-}
-
-#navbar a:hover{
-  background-color: #a4e5ff;
-  transition: all ease-in-out 250ms
-}
-
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+.pageLi{
+    box-shadow: none;
 }
