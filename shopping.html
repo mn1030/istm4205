@@ -133,6 +133,7 @@
             // Create a li for name
             const li = document.createElement("button");
             li.setAttribute("onclick", "window.location.href='"+shopping[i].site+"';");
+            li.setAttribute("class", "btn");
             li.innerHTML=shopping[i].name;
             li.style.backgroundImage = "url(images/shopping/"+shopping[i].id+".png)";
 
