@@ -71,6 +71,7 @@ div.up {
         // Create a li for name
         const li = document.createElement("button");
         li.setAttribute("onclick", "window.location.href='"+pages[i].id+".html';");
+        li.setAttribute("class", "btn");
         li.innerHTML=pages[i].h2;
         li.style.backgroundImage = "url(images/home/"+pages[i].id+".png)";
 
