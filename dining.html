@@ -178,6 +178,9 @@
 
           const restaurants = [bandoola,froggy,pizza,tatte,gourd,capo,deli,farmers,ted,baked,gtowncupcake,soi38,toryumon, chipotle, tonic, north];
 
+          
+
+          
           for (i = 0; i< restaurants.length;i++){
               // Create "div" node:
             const ourDiv = document.createElement("div");
@@ -186,11 +189,15 @@
             // Create a li for name
             const li = document.createElement("button");
             li.setAttribute("onclick", "window.location.href='"+restaurants[i].site+"';");
+            
             li.innerHTML=restaurants[i].name;
             li.style.backgroundImage = "url(images/dining/"+restaurants[i].id+".png)";
 
+            li.classList.add('btn');
+
             // Append name
             ourDiv.appendChild(li);
+
 
             // Append address
             const address = document.createElement("p");
@@ -220,7 +227,10 @@
             // Append the div node to the list:
             document.getElementById("restaurantList").appendChild(ourDiv);
 
+
           }
+
+          
           
 
 
