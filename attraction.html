@@ -175,6 +175,7 @@
             // Create a li for name
             const li = document.createElement("button");
             li.setAttribute("onclick", "window.location.href='"+attractions[i].site+"';");
+            li.setAttribute("class", "btn");
             li.innerHTML=attractions[i].name;
             li.style.backgroundImage = "url(images/attraction/"+attractions[i].id+".png)";
 
